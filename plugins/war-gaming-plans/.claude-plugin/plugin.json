@@ -1,0 +1,13 @@
+{
+  "name": "war-gaming-plans",
+  "displayName": "War-Gaming Plans",
+  "description": "Stress-test an implementation plan before you build it — verify every assumption, sweep failure scenarios, fold fixes back into the plan.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joe Pascual"
+  },
+  "homepage": "https://github.com/jojopas/war-gaming-plans",
+  "repository": "https://github.com/jojopas/war-gaming-plans",
+  "license": "MIT",
+  "keywords": ["planning", "war-gaming", "risk-assessment", "review"]
+}
