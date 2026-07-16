@@ -6,8 +6,8 @@
   "author": {
     "name": "Joe Pascual"
   },
-  "homepage": "https://github.com/jojopas/war-gaming-plans",
-  "repository": "https://github.com/jojopas/war-gaming-plans",
+  "homepage": "https://github.com/jojopas/claude-plugins",
+  "repository": "https://github.com/jojopas/claude-plugins",
   "license": "MIT",
   "keywords": ["planning", "war-gaming", "risk-assessment", "review"]
 }

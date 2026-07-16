@@ -14,10 +14,42 @@
       "author": {
         "name": "Joe Pascual"
       },
-      "homepage": "https://github.com/jojopas/war-gaming-plans",
-      "repository": "https://github.com/jojopas/war-gaming-plans",
+      "homepage": "https://github.com/jojopas/claude-plugins",
+      "repository": "https://github.com/jojopas/claude-plugins",
       "license": "MIT",
       "keywords": ["planning", "war-gaming", "risk-assessment", "review"]
+    },
+    {
+      "name": "agent-persona",
+      "source": {
+        "source": "github",
+        "repo": "jojopas/agent-persona"
+      },
+      "description": "Bring a persistent, file-backed agent teammate into a Claude Code session in Become, Consult, or Delegate mode. Works with OpenClaw or any agent-workspace layout via roster.json.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Joe Pascual"
+      },
+      "homepage": "https://github.com/jojopas/agent-persona",
+      "repository": "https://github.com/jojopas/agent-persona",
+      "license": "MIT",
+      "keywords": ["agents", "delegation", "openclaw", "personas"]
+    },
+    {
+      "name": "session-baton",
+      "source": {
+        "source": "github",
+        "repo": "jojopas/session-baton"
+      },
+      "description": "Bank a session into a one-shot, self-deleting resume marker so the next session resumes with zero ramp-up. Ships the /renew skill plus a SessionStart hook that auto-injects the marker on /clear.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Joe Pascual"
+      },
+      "homepage": "https://github.com/jojopas/session-baton",
+      "repository": "https://github.com/jojopas/session-baton",
+      "license": "MIT",
+      "keywords": ["session", "resume", "context", "hooks", "memory"]
     }
   ]
 }

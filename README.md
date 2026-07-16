@@ -1,41 +1,39 @@
-# war-gaming-plans
+# jojopas-plugins
 
-A [Claude Code](https://code.claude.com) skill that attacks your own implementation plan **before** the codebase does.
+A [Claude Code](https://code.claude.com) plugin marketplace — reusable skills for planning, agent delegation, and session continuity.
 
-Two passes — assumption verification and scenario sweep — then folds every fix back into the plan document. A war game that ends in a review memo is a failed war game: the executor reads the plan, not the memo.
+## Install
 
-Use it when a plan or spec is written but not yet executed, or any time you'd say "poke holes in this," "stress-test this," or "what could go wrong."
-
-## Install (recommended — plugin marketplace)
-
-In Claude Code:
+In Claude Code, add the marketplace once:
 
 ```
-/plugin marketplace add jojopas/war-gaming-plans
+/plugin marketplace add jojopas/claude-plugins
+```
+
+Then install any of the plugins:
+
+```
 /plugin install war-gaming-plans@jojopas-plugins
+/plugin install agent-persona@jojopas-plugins
+/plugin install session-baton@jojopas-plugins
 ```
 
-That's it. Claude Code manages updates — run `/plugin` any time to check.
+Claude Code manages updates — run `/plugin` any time to check.
 
-## Install (manual — no plugin)
+## Plugins
 
-Copy the skill folder into your personal skills directory:
+### war-gaming-plans
+Attacks your own implementation plan **before** the codebase does. Two passes — assumption verification and scenario sweep — then folds every fix back into the plan document. Triggers when you ask to "war game," "poke holes in," or "stress test" a plan, and proactively after any plan whose execution touches production, migrations, external services, or money. Lives in this repo under [`plugins/war-gaming-plans`](plugins/war-gaming-plans).
 
-```bash
-git clone https://github.com/jojopas/war-gaming-plans
-cp -R war-gaming-plans/plugins/war-gaming-plans/skills/war-gaming-plans ~/.claude/skills/
-```
+### agent-persona
+Brings a persistent, file-backed agent teammate into a session in **Become**, **Consult**, or **Delegate** mode — loading their identity, memory, rules, and skills from the agent's workspace, and writing a session digest back on exit. Works with OpenClaw out of the box, or any agent-workspace layout via `roster.json`. Source: [jojopas/agent-persona](https://github.com/jojopas/agent-persona).
 
-Or, to scope it to a single project so everyone who clones that repo gets it:
+### session-baton
+Banks a session into a one-shot, self-deleting resume marker (a **baton**) so the next session resumes with zero ramp-up. Ships the `/renew` skill plus a `SessionStart` hook that auto-injects the marker on `/clear` — installing the plugin wires the hook for you. Source: [jojopas/session-baton](https://github.com/jojopas/session-baton).
 
-```bash
-mkdir -p <your-repo>/.claude/skills
-cp -R war-gaming-plans/plugins/war-gaming-plans/skills/war-gaming-plans <your-repo>/.claude/skills/
-```
+## Manual install (no plugin system)
 
-## How it triggers
-
-Once installed, Claude invokes it automatically when you ask to "war game," "poke holes in," or "stress test" a plan — and proactively after writing any plan whose execution touches production, migrations, external services, or money.
+Each skill also works as a plain personal skill — copy its `SKILL.md` folder into `~/.claude/skills/`. See each source repo's README for the exact path.
 
 ## License
 
