@@ -1,0 +1,13 @@
+{
+  "name": "verifying-roku-on-device",
+  "displayName": "Verifying Roku on Device",
+  "description": "A catalog of Roku/BrightScript defects that compile clean, pass unit tests, survive code review — and only surface on real hardware. Each trap paired with the symptom a viewer actually sees.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joe Pascual"
+  },
+  "homepage": "https://github.com/jojopas/claude-plugins",
+  "repository": "https://github.com/jojopas/claude-plugins",
+  "license": "MIT",
+  "keywords": ["roku", "brightscript", "scenegraph", "tv", "device-testing", "review"]
+}
