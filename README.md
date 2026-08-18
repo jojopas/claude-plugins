@@ -14,6 +14,7 @@ Then install any of the plugins:
 
 ```
 /plugin install war-gaming-plans@jojopas-plugins
+/plugin install verifying-roku-on-device@jojopas-plugins
 /plugin install agent-persona@jojopas-plugins
 /plugin install session-baton@jojopas-plugins
 ```
@@ -24,6 +25,9 @@ Claude Code manages updates — run `/plugin` any time to check.
 
 ### war-gaming-plans
 Attacks your own implementation plan **before** the codebase does. Two passes — assumption verification and scenario sweep — then folds every fix back into the plan document. Triggers when you ask to "war game," "poke holes in," or "stress test" a plan, and proactively after any plan whose execution touches production, migrations, external services, or money. Lives in this repo under [`plugins/war-gaming-plans`](plugins/war-gaming-plans).
+
+### verifying-roku-on-device
+`bsc` and Rooibos prove the pure layer only — the node layer is unexercised until the channel launches on a TV. A catalog of the Roku/BrightScript traps that compile clean, pass unit tests and survive code review, each paired with the symptom a viewer actually sees (a dead dispatcher looks like a hung screen; a dropped field looks like a layout choice; an oversized texture paints black), plus the on-device build/console loop. Baseline-tested: two independent reviewers found 2 of 8 planted device-only defects, and both downgraded the channel-killing one to "medium." Lives in this repo under [`plugins/verifying-roku-on-device`](plugins/verifying-roku-on-device).
 
 ### agent-persona
 Brings a persistent, file-backed agent teammate into a session in **Become**, **Consult**, or **Delegate** mode — loading their identity, memory, rules, and skills from the agent's workspace, and writing a session digest back on exit. Works with OpenClaw out of the box, or any agent-workspace layout via `roster.json`. Source: [jojopas/agent-persona](https://github.com/jojopas/agent-persona).
